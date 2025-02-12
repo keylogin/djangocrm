@@ -46,4 +46,4 @@ def register_user(request):
         form = SignUpForm()    
         return render(request, 'register.html', {'form':form})
 
-    
+    return render(request, 'register.html', {'form':form})

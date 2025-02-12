@@ -6,8 +6,13 @@
 <h1>Register</h1>
 <br />
 
-<form method="POST" action="{% url 'home' %}">
+<form method="POST" action="">
     {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <br/>
+        <button type="submit" class="btn btn-secondary">Register</button>
 <form>
 
 </div>
