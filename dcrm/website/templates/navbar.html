@@ -6,9 +6,23 @@
       
     <div class="navbar-nav me-auto mb-lg-0">
         <ul class="nav navbar-nav">
+          {% if user.is_authenticated %}
+        
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
             </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Login</a>
+            </li>
+
+        {% endif %}
         </ul>
     </div>
 </nav>
